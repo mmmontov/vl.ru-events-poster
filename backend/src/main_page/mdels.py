@@ -1,7 +1,7 @@
 from sqlalchemy import MetaData, Integer, String, TIMESTAMP, ForeignKey, Table, Column
 import datetime
 
-metadata = MetaData()
+from src.database import metadata
 
 tags = Table(
     'tags',
@@ -16,8 +16,8 @@ events = Table(
     metadata,
     Column("id", Integer, primary_key=True),
     Column("name", String, nullable=False),
-    Column("tags", Integer, ForeignKey('tags.id')),
-    Column("date", TIMESTAMP, default=datetime.datetime.now(datetime.timezone.utc), nullable=False),
+    Column("tags", String, nullable=False), # Integer, ForeignKey('tags.id')
+    Column("date", String, nullable=False),
     Column("cost", Integer, nullable=False),
     Column("place", String, nullable=False),
     Column("coordinates", String, nullable=False),
