@@ -13,7 +13,6 @@ function App() {
   return (
     <>
     <HomePage />
-    <Test />
     <Sidebar />
     </>
   );

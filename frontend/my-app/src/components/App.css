@@ -1,94 +1,233 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .app {
-    font-family: Arial, sans-serif;
-    margin: auto;
+  font-family: Arial, sans-serif;
+  margin: auto;
 }
 
 header {
-    background-color: #f8f8f8;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
 }
 
 .menu-icon {
-    font-size: 35px;
-    color: #007BFF;
-    margin: 10px;
+  font-size: 35px;
+  color: #007bff;
+  margin: 10px;                            
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .search-icon {
-    font-size: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* поиск */
+.search-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #a8a5a5;
+  border-radius: 15px;
+  width: 100;
+}
+
+.input-container input {
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+}
+
+.search-header {
+  display: flex;
+  justify-content: center;
+}
+
+.back-icon {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.input-search-icon {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.popular-queries {
+  margin-top: 20px;
+}
+
+.popular-queries ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.popular-queries li {
+  margin-bottom: 10px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    width: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 50px;
 }
 
 .login-button {
-    background-color: transparent;
-    border: 2px solid blue;
-    border-radius: 40px;
-    color: rgb(59, 12, 231);
-    cursor: pointer;
-    margin-right: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
+  background-color: transparent;
+  border: 2px solid blue;
+  border-radius: 40px;
+  color: rgb(59, 12, 231);
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-around;
-    overflow-x: auto;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  overflow-x: auto;
+  padding: 10px 0;
 }
 
 .nav-button {
-    background-color: transparent;
-    border: 1px solid blue;
-    border-radius: 40px;
-    color: rgb(59, 12, 231);
-    cursor: pointer;
-    margin-right: 10px;
-    padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid blue;
+  border-radius: 40px;
+  color: rgb(59, 12, 231);
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 10px 15px;
 }
 
+/* main */
+
 .events {
-    margin: 15px;
+  margin: 15px;
 }
 
 .date-container {
-    display: flex;
-    overflow-x: auto;
-    margin: 15px;
+  display: flex;
+  overflow-x: auto;
+  margin: 15px;
 }
 
 .week-day {
-    margin-left: 14px;
+  margin-left: 14px;
 }
 
 .date-button {
-    background-color: transparent;
-    border: none;
-    border-radius: 15px;
-    color: black;
-    cursor: pointer;
-    margin-right: 10px;
-    padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  border-radius: 15px;
+  color: black;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 10px 15px;
 }
 
 .for-you {
-   margin: 15px;
+  margin: 15px;
 }
+
+/* footer */
+
+footer {
+  padding: 20px;
+  background-color: #ccc3c3;
+  border-radius: 10px;
+}
+
+.footer-section, .footer-list {
+  margin: 10px;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.return-button, .find-button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-buttons {
+  width: 200px;
+}
+
+.return-button {
+  background-color: #3b7dd8;
+  border: 3px solid #3b7dd8;
+  color: #ffffff;
+}
+
+.find-button {
+  border: 3px solid #3b7dd8;
+  color: #3b7dd8;
+  background-color: transparent;
+}
+
+/* .footer-list {
+  list-style-type: none;
+  padding-left: 0; 
+  margin-bottom: 10px;
+  display: block;
+}
+                                         хз почему не работает мб с классами чота сделать слишком все в кучу там
+.footer-list a{
+  text-decoration: none;
+  color: solid black;
+}
+
+.footer-list a:hover {
+  text-decoration: underline;
+} */
