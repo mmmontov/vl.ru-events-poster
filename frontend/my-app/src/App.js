@@ -4,8 +4,8 @@ import Test from './components/Test';
 import Sidebar from './components/Sidebar';
 import './components/App.css';
 import './components/Sidebar.css'; 
-
-import myLogo from './images/logo2.png'
+import Login from './components/Login'
+import './components/Login.css'
 
 
 
@@ -14,6 +14,7 @@ function App() {
     <>
     <HomePage />
     <Sidebar />
+    <Login />
     </>
   );
 }

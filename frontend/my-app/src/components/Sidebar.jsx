@@ -1,9 +1,9 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar = ({ isOpen, sidebarRef }) => {  {/*заменить картики на иконки*/}
+const Sidebar = ({ isOpen, sidebarRef }) => { 
   return (
-    <div className="sidebar" ref={`sidebar ${isOpen ? "open" : ""}`}>
+    <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className='container'>
       <div className='line'></div>
       <a href="https://example.com" rel="">
