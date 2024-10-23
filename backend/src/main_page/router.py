@@ -12,7 +12,7 @@ router = APIRouter(
 )
 
 @router.get("/")
-async def get_all_events(limit: int, session: AsyncSession = Depends(get_async_session)):
+async def get_all_events(limit: int = 5, session: AsyncSession = Depends(get_async_session)):
     query = select(events).limit(limit)
     result = await session.execute(query)
     return result.mappings().all()
