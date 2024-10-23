@@ -28,19 +28,6 @@ events = Table(
     Column("image_path", String, nullable=False),
 )
 
-users = Table(
-    'users',
-    metadata,
-    Column("id", Integer, primary_key=True),
-    Column("name", String, nullable=False),
-    Column("phone_number", String, nullable=False),
-    Column("email", String),
-    Column("password", String, nullable=False),
-    Column("age", Integer, nullable=False),
-    Column("tickets", Integer, ForeignKey('events.id')),
-    Column("likes", Integer, ForeignKey('events.id')),
-    Column("recomendations", String),
 
-)
 
 
