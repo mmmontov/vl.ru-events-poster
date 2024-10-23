@@ -1,22 +1,41 @@
-/* .sidebar {
-  
-  background-color: #f0f0f0;
-  width: 200px;
-  height: 100%;
+.sidebar {
   position: fixed;
   top: 0;
+  left: -230px; /* Убрать минус чтобы увидить сайдбар*/
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar.open {
   left: 0;
 }
 
-.sidebar-item {
-  
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+.line, .line2, .line3 {
+  border-bottom: 1px solid #000000;
 }
 
-.icon {
-  
-  margin-right: 10px;
-} */
+.logo2 {
+  width: 50px;
+}
+
+.login, .tickets, .selected, .location, .log-out {
+  margin-top: 35px;
+}
+
+a {
+  font-size: 15px;
+  text-decoration:  none;
+}
+
+.line2 {
+  margin-top: 40px;
+}
+
+.log-out {
+  margin-top: 250%;
+}
+/*  */

@@ -13,10 +13,10 @@ function App() {
   return (
     <>
     <HomePage />
-    <Test />
     <Sidebar />
     </>
   );
 }
 
 export default App;
+//
