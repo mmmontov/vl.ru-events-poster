@@ -18,6 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .left-section {
@@ -39,8 +40,12 @@ header {
   cursor: pointer;
 }
 
-.search-icon {
-  font-size: 30px;
+.logo {
+ cursor: pointer;
+}
+
+.search-icon, .input-search-icon {
+  width: 30px;
   cursor: pointer;
 }
 
@@ -107,12 +112,6 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  width: 50px;
-}
-
 .login-button {
   background-color: transparent;
   border: 2px solid blue;
@@ -145,6 +144,10 @@ input[type="text"] {
 
 .events {
   margin: 15px;
+}
+
+.calendar-icon {
+  width: 35px;
 }
 
 .date-container {
@@ -216,19 +219,20 @@ footer {
   background-color: transparent;
 }
 
-/* .footer-list {
+.footer-list {
   list-style-type: none;
   padding-left: 0; 
-  margin-bottom: 10px;
-  display: block;
 }
-                                         хз почему не работает мб с классами чота сделать слишком все в кучу там
-.footer-list a{
-  text-decoration: none;
-  color: solid black;
+
+.footer-list li {
+  margin-bottom: 10px; 
+}
+
+.footer-list a {
+  text-decoration: none; 
+  color: #000000; 
 }
 
 .footer-list a:hover {
-  text-decoration: underline;
-} */
- /*  */
+  text-decoration: underline; 
+}

@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -230px; /* Убрать минус чтобы увидить сайдбар*/
+  left: -230px;
   width: 200px;
   height: 100%;
   background-color: #fff;
@@ -14,21 +14,41 @@
   left: 0;
 }
 
+.container a {
+  display: flex;
+  align-items: center; 
+  padding: 10px 0;
+  font-size: 15px;
+  text-decoration:  none;
+  color: #000000;
+}
+
+.container img {
+  margin-right: 10px; 
+}
+
+.SidebarButtons span{
+  margin-top: 35px;
+}
+
 .line, .line2, .line3 {
   border-bottom: 1px solid #000000;
 }
 
 .logo2 {
   width: 50px;
+  margin-left: 10px;
 }
 
-.login, .tickets, .selected, .location, .log-out {
+.fullname, .tickets-vlru, .favourite, .city, .logout {
   margin-top: 35px;
+  margin-left: 10px;
+  width: 30px;
+  vertical-align: middle;
 }
 
-a {
-  font-size: 15px;
-  text-decoration:  none;
+.login span {
+ font-weight: bold;
 }
 
 .line2 {
@@ -36,6 +56,9 @@ a {
 }
 
 .log-out {
-  margin-top: 250%;
+  margin-top: 125%;
 }
-/*  */
+
+.log-out span {
+  color: red;
+}

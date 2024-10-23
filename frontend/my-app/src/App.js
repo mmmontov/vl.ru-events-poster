@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 import './components/App.css';
 import './components/Sidebar.css'; 
 
-
+import myLogo from './images/logo2.png'
 
 
 
