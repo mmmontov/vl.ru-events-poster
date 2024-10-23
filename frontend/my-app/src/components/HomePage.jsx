@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Sidebar from "./Sidebar";
+import { Children } from "react";
+
 
 const App = () => {
+
 // сайдбар
 const [isSidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => {
@@ -41,20 +44,21 @@ const [isSearchOpen, setSearchOpen] = useState(false);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isSidebarOpen]);
+  
   const myArr = [1,2,3]
   return (
     <div className="app">
       <header>
         <div className="header-content">
           <div className="left-section">
-            <div className="menu-icon" onClick={toggleSidebar}>☰</div> {/*почему-то не хочет открываться сайдбар*/}
+            <div className="menu-icon" onClick={toggleSidebar}>☰</div>
             <img className="logo" src="https://media.discordapp.net/attachments/1135282998313484450/1298547341347000320/logo.png?ex=6719f5f4&is=6718a474&hm=cdabd94d0f31851039b487e0f198e7f51610a078428153c71d3d808d782941ff&=&format=webp&quality=lossless"/>
           </div>
           <div className="right-section">
             <div onClick={toggleSearch}>
             <img className="search-icon" src="https://media.discordapp.net/attachments/1135282998313484450/1298548534915895346/search.png?ex=6719f710&is=6718a590&hm=1a8b2e751e2937bd4725cf3fc756ff28c6948db5350616d042fa96b30e789b08&=&format=webp&quality=lossless&width=325&height=325"/>
             </div>
-            <button className="login-button">Войти</button>
+            <button className="login-button">Вход</button>
           </div>
         </div>
         {/* поиск */}
@@ -84,18 +88,20 @@ const [isSearchOpen, setSearchOpen] = useState(false);
       </header>
       <main>
       <div className="button-container">
-          {Array.from({ length: 9 }, (_, index) => (
-            <button key={index} className="nav-button">
-              Кнопка
-            </button>
-          ))}
+          <button className="nav-button">Концерты</button>
+          <button className="nav-button">Спорт</button>
+          <button className="nav-button">Стендап</button>
+          <button className="nav-button">Кино</button>
+          <button className="nav-button">События</button>
+          <button className="nav-button">Экскурсии</button>
+          <button className="nav-button">Музеи</button>
+          <button className="nav-button">Впечатления</button>
         </div>
 
-        <h1 className="events">События по датам</h1>
-        <img className="calendar-icon"src="https://media.discordapp.net/attachments/1135282998313484450/1298566143979552829/1815a8e622471f34.png?ex=671a0776&is=6718b5f6&hm=4a4e176665efbae160858964e78ee2d3740967c03a1a07dc615fbff0654ccb33&=&format=webp&quality=lossless&width=445&height=445" alt="" />
+        <h1 className="events">События по датам<img className="calendar-icon"src="https://media.discordapp.net/attachments/1135282998313484450/1298566143979552829/1815a8e622471f34.png?ex=671a0776&is=6718b5f6&hm=4a4e176665efbae160858964e78ee2d3740967c03a1a07dc615fbff0654ccb33&=&format=webp&quality=lossless&width=445&height=445"/></h1>
         <div className="date-container">
           {Array.from({ length: 19 }, (_, index) => {
-            const day = (index + 21) % 31;
+            const day = (index + 1) % 31;
             const date = new Date(2024, 9, day === 0 ? 31 : day);
             const weekDays = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
             const weekDay = weekDays[date.getDay()];
@@ -112,8 +118,9 @@ const [isSearchOpen, setSearchOpen] = useState(false);
       </main>
       
       <Sidebar isOpen={isSidebarOpen} sidebarRef={sidebarRef} />
+      
       {/* footer */}
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quasi nobis sapiente ratione ad quas voluptates cupiditate aut ipsam? Pariatur excepturi officia fugiat nobis labore atque veritatis illo suscipit aperiam dolor saepe explicabo voluptatem consequatur quasi velit autem, quis nihil dolores quo facilis quod debitis ad! Eligendi aut tenetur veritatis delectus alias quaerat repudiandae ducimus, exercitationem aperiam quas animi totam veniam dolores! Cum quos praesentium quis consectetur quas dolore exercitationem quaerat, error ex ipsum enim tempore dolores aliquam quasi doloremque possimus aspernatur sequi, beatae voluptas maxime laborum reiciendis ab! Rem temporibus sint natus accusamus in fugit a distinctio vitae ex tempora esse, sequi inventore molestiae amet. Optio beatae aspernatur sit eum iure? Temporibus eos ad esse amet maiores suscipit autem enim a blanditiis nisi voluptas ipsa asperiores, ea culpa repellendus consequuntur dolores nesciunt repudiandae quibusdam in vel minima. Explicabo dolore dolores ipsa! Assumenda veniam repellat nemo voluptatibus harum ea. Ratione, iure consectetur dolore quas aut animi libero eos sed debitis at dignissimos magnam esse alias corporis expedita eligendi ipsa deserunt saepe perferendis iusto! Sed sunt amet voluptatibus officia quos veritatis ipsa iste quisquam nostrum necessitatibus cumque quaerat harum reiciendis adipisci, inventore libero assumenda mollitia maxime dolor similique? Impedit debitis nobis distinctio voluptatum molestias nihil error vero consequuntur. Nisi ad at sed molestias, temporibus ut deleniti ratione dolore, laborum reiciendis eveniet quae aperiam tenetur? Sint voluptate placeat, deleniti explicabo architecto delectus a magnam voluptatibus! Ad, at! Numquam itaque, nulla labore atque vitae amet quaerat corporis esse odit fugiat ut. Inventore odit, dolorem possimus laborum labore deleniti at ipsum impedit reiciendis porro nam esse voluptate quis! Modi animi, dolor voluptatibus nam, fuga illum ut, veritatis et aperiam deleniti aliquam dolorum. Odit, nisi. Provident natus totam voluptate unde itaque alias sint laudantium nobis fugit. Veniam ea eligendi ipsa nihil inventore repellendus provident natus!</p>
+      
       <footer>
         <div className="footer-section">
           <h2 className="footer-heading">Помощь c билетами</h2>
