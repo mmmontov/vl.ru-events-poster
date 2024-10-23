@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: db_app
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    command: -p 1221
+    expose:
+      - 1221
+    ports:
+      - 2005:1221
+    env_file:
+      - .env-non-dev
+
+  app:
+    build: 
+      context: .
+    env_file:
+      - .env-non-dev
+    container_name: vlru_app
+    command: ["/vlru_app/docker/app.sh"]
+    ports:
+      - 9999:8000
+    depends_on:
+      - db
